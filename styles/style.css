@@ -2,7 +2,7 @@
 .clearfix:after {
 	content: " "; 
 	visibility: hidden;
-	display: green;
+	display: block;
 	height: 0;
 	clear: both;
 }
@@ -74,4 +74,24 @@ main {
 
 .footer {
 	background-color: #87F5A9;
+}
+
+.who-am-I {
+	padding-top: 10px;
+}
+
+.who-am-I > .arduino-video {
+	float: left;
+	max-width: 50%;
+}
+
+.who-am-I > .my-info {
+	float: right;
+	max-width: 50%;	
+}
+
+.experience-photo > img {
+	height: 300px;
+	max-width: 100%;
+	border-radius: 20%;
 }
