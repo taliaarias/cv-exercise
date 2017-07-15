@@ -5,11 +5,6 @@
     clear: both;
 }
 
-.container {
-    width: 100%;
-    margin: 0 auto;
-}
-
 .col-1 {
     width: 8.33333333%;
     float: left; 
@@ -68,4 +63,21 @@
 .col-12 {
     width: 100%;
     float: left;
+}
+
+.row-flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.academic {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.academic .text-image { /*It doesn´t work, maybe is because figcaption has his own properties*/
+    align-self: center;
 }

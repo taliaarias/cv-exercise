@@ -4,38 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+	<link rel="stylesheet" type="text/css" href="styles/grid.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Kurale" rel="stylesheet">
+
     <title>Floydcodepink CV</title>
+
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpiiZm0kg4wbYwPvUtNZvyLbiNcz6p8"></script>
+    <script>
+            function initialize() {
+                var myLatLng = {lat: 42.762480, lng: -83.283406};
+
+                  var mapProp = {
+                    center:myLatLng,
+                    zoom:15,
+                    mapTypeId:google.maps.MapTypeId.ROADMAP
+                  };
+                  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+                  var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    title: 'Aqui estamos'
+                  });
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+
 </head>
 <body>
-    <header class="header">
-		<h1 class="title">Floydcodepink</h1>
-		<img class="title-img" src="" alt="Foto de CV"> <!--meter una imagen-->
-	</header>
+
 	<nav class="navbar">
 		<ul class="navbar-list">
 			<li class="navbar-item">
-				<a href="">Cover</a>
+				<a href="index.html">Cover</a>
 			</li>
 			<li class="navbar-item">
-				<a href="">Who am I?</a>
+				<a href="index.html">Who am I?</a>
 			</li>
 			<li class="navbar-item">
-				<a href="">Academic training</a>
+				<a href="index.html">Academic training</a>
 			</li>
 			<li class="navbar-item">
-				<a href="">Work experience</a>
+				<a href="index.html">Work experience</a>
 			</li>      
 			<li class="navbar-item">
-				<a href="">About me</a>
+				<a href="index.html">About me</a>
 			</li>
-			<li class="navbar-item active"><!--en esta pongo active para que salga siempre de inicio-->                                  
+			<li class="navbar-item active">  	
 				<a href="">Contact</a>
 			</li>
 		</ul>
 	</nav>
+	<main>
+        <section class="contact section-container">
+            <h2>Contact me</h2>
+            <div class="row">
+                <div class="col-6">
+                    <div id="googleMap"></div>
+                </div>
+                <div class="col-6">
+                    <div class="form">
+                       <form name="contacto" method="get">
+                            <div class="form-row">
+                                <label for="nombre">First Name:</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
 
+                                <label for="apellidos">Last Name:</label>
+                                <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" placeholder="name@company.com" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div>Kind of job</div>
+                                <label for="tipo_mision_1">Article</label><!--para que el tipo radio funcione, tienen que tener ids distintos pero siempre el mismo name, sino podría seleccionar todos y yo sólo quiero poder seleccionar 1-->
+                                <input type="radio" id="tipo_mision_1" name="tipo_mision" value="Rescate" required>
+
+                                <label for="tipo_mision_2">Master class</label>
+                                <input type="radio" id="tipo_mision_2" name="tipo_mision" value="Ajuste de cuentas" required>
+
+                                <label for="tipo_mision_3">Project design</label>
+                                <input type="radio" id="tipo_mision_3" name="tipo_mision" value="Disparos y explosivos" required>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="ejercito">Tamaño del ejército</label>
+                                <input type="number" id="ejercito" name="ejercito" min="10" required>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="fecha">Fecha del trabajo:</label>
+                                <input type="date" id="fecha" name="fecha" required>
+                            </div>
+
+                            <div class="form-row">
+                                <input type="submit" id="submit">
+                            </div>
+                        </form> 
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="section-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de servicio</th><!--en vez de td uso th porq es un head y lo pone en minuscula-->
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Consulta de misión</td>
+                        <td>100 €</td>
+                    </tr>
+                    <tr>
+                        <td>Misión simple</td>
+                        <td>500 €</td>
+                    </tr>
+                    <tr>
+                        <td>Rescate</td>
+                        <td>1000 €</td>
+                    </tr>
+                    <tr>
+                        <td>Salvar Gotham</td>
+                        <td>15.000 €</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+    </main>
 	<footer class="footer">
 		Talia Arias &copy; 2017 KeepCoding
 	</footer>

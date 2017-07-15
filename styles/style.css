@@ -79,10 +79,10 @@ main {
 .header > .title {
 	position: absolute;
 	top: 55%;
-	z-index: 1;
 	width: 100%;
-	font-size: 2.5em;
 	text-align: center;
+	font-size: 2.5em;
+	z-index: 1;
 	color: black;
 }
 
@@ -116,9 +116,67 @@ main {
 	color: #BF360C;
 }
 
+.academic-img {
+	max-width: 100%;
+	height: 250px;
+	border-radius: 50%;
+}
+
+#googleMap {
+	height: 400px;
+	z-index: 1;
+}
+
 .footer {
 	background-color: #D4E157;
 	height: 100vh;
 	line-height: 100%; /*to center vertically*/
 	text-align: center; /*to center horizontally*/
+}
+
+.form {
+	padding: 0 20px;
+}
+
+.form .form-row {
+	padding: 10px;
+}
+
+input {
+	padding: 4px;
+	border: 1px solid #ccc;
+	border-radius: 4%;
+}
+
+input[type=button], input[type=submit], button {
+	background-color: #FF9100;
+	border: none;
+	color: #FFFFFF;
+	padding: 15 px 40 px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 0;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+thead > tr {
+	background-color: #FF9100;
+}
+
+th {
+	height: 50px;
+}
+
+th, td {
+	padding: 8px;
+	border-bottom: 1px solid #158838;
+}
+
+tbody > tr:hover {
+	background-color: #FFD180; 
 }
