@@ -5,9 +5,14 @@
     clear: both;
 }
 
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
 .col-1 {
-    width: 8.33333333%; /*para calcular: si el 100% son 12 columnas, cuanto es 1 columna*/
-    float: left; /*las posicionamos*/
+    width: 8.33333333%;
+    float: left; 
 }
 
 .col-2 {
