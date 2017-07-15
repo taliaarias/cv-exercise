@@ -1,4 +1,8 @@
-
+*	{ 
+	box-sizing:	border-box;	
+	-webkit-box-sizing:	border-box;
+	-moz-box-sizing: border-box;	
+}
 .clearfix:after {
 	content: " "; 
 	visibility: hidden;
@@ -27,10 +31,12 @@ body {
 	list-style-type: none;
 	margin: 0;
 	float: right;
+	font-size: 0;
 }
 
 .navbar > .navbar-list > .navbar-item {
 	display: inline-block; 
+	font-size: 16px; /*no puedo poner 1em porque no funciona (creo q calcula 1em de 0, ya que su padre tiene 0px)*/
 }
 
 .navbar > .navbar-list > .navbar-item a {
@@ -39,6 +45,11 @@ body {
 	color: rgba(11, 11, 11, 0.9); 
 	display: inline-block;
 	font-weight: bold;
+}
+
+.navbar > .navbar-list > .navbar-item a:hover {
+	color: #FFFFFF;
+	background-color: #158838;	
 }
 
 .navbar > .navbar-list > .navbar-item.active a {
@@ -69,7 +80,9 @@ body {
 }
 
 main {
-	    background-color: #87F5A9;
+	background-color: #87F5A9;
+	width: 100%; /*valorar si pongo max-width:1200px;*/
+	margin: 0 auto; 
 }
 
 .footer {
