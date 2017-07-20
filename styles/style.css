@@ -52,6 +52,9 @@ main {
 	color: rgba(11, 11, 11, 0.9); 
 	display: inline-block;
 	font-weight: bold;
+	-webkit-transition: background-color 0.5s linear; /*does not work*/
+	-o-transition: background-color 0.5s linear;
+	-moz-transition: background-color 0.5s linear;
 }
 
 .navbar > .navbar-list > .navbar-item a:hover {
@@ -70,10 +73,15 @@ main {
 
 .header > .title-img {
 	background-size: 100% 100%;
-	background-repeat: none;
+	background-repeat: no-repeat;
 	background-position: center center;
 	background-image: url(../images/2215253658_1d49567f0d.jpg);
 	height: 100vh;
+	transition: background-size 0.5s;
+} 
+
+.header > .title-img:hover {
+	background-size: 115% 115%;
 } 
 
 .header > .title {
@@ -84,7 +92,13 @@ main {
 	font-size: 2.5em;
 	z-index: 1;
 	color: black;
+	transition: background-size 0.7s;
 }
+
+.header > .title:hover {
+	font-size: 3em;
+	color: white;
+} 
 
 .section-container {
 	padding-top: 50px;
@@ -109,6 +123,7 @@ main {
 	height: 300px;
 	max-width: 100%;
 	border-radius: 20%;
+	border-style: double;
 }
 
 .work-experience {
@@ -118,8 +133,39 @@ main {
 
 .academic-img {
 	max-width: 100%;
-	height: 250px;
-	border-radius: 50%;
+	height: 350px;
+	width: 350px;
+	border-radius: 40%;
+}
+
+.flip {
+	height: 350px;
+	width: 350px;
+	position: relative; 
+}
+
+.flip-img {
+	position: absolute;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	transition: transform 1s;
+	transition: transform 1s;
+}
+
+.flip:hover .front {
+	transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
+}
+
+.flip:hover .back {
+	transform: rotateY(0);
+	-webkit-transform: rotateY(0);
+}
+
+
+.back {
+	transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
 }
 
 #googleMap {
