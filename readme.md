@@ -6,4 +6,4 @@
 
 #I wasn´t able to center the content of figcaption with flexbox.
 
-#In E11 it overlaps both academic pictures. I couldn´t fixed the bug.
+#In E11 it overlaps both academic pictures. I couldn´t fixed the bug. See comments on grid.css.

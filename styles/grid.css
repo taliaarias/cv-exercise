@@ -70,13 +70,21 @@
     flex-flow: row wrap;
 }
 
-.academic {/*dectected bug in E11*/
+.academic {/*dectected bug in E11. It doesn´t work with webkit prefix.*/
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-around;
     flex: 1;
+    flex-basis: content 350px; /*It suposed to fixed the bug, but don´t*/
 }
+
+/*other option to fix the bug (specifying children´s height property), but still not working.
+.flex-bug-e11 { 
+    height: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}*/
 
 .academic .text-image { /*It doesn´t work, maybe is because figcaption has his own properties*/
     align-self: center;
