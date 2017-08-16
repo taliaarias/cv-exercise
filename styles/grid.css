@@ -80,7 +80,7 @@
 }
 
 /*other option to fix the bug (specifying children´s height property), but still not working.
-.flex-bug-e11 { 
+.academic > .flex-bug-e11 { 
     height: 70px;
     padding-top: 10px;
     padding-bottom: 10px;

@@ -12,26 +12,26 @@
     <title>Floydcodepink CV</title>
 </head>
 <body>
-    <header class="header">
+    <header id="" class="header">
 		<h1 class="title">Floydcodepink</h1>
 		<div class="title-img"></div>
 	</header>
 	<nav class="navbar">
 		<ul class="navbar-list">
-			<li class="navbar-item active"><!--en esta pongo active para que salga siempre de inicio-->
-				<a href="">Cover</a>
+			<li class="navbar-item active">
+				<a href="#">Cover</a>
 			</li>
 			<li class="navbar-item">
-				<a href="">Who am I?</a>
+				<a href="#who-am-I">Who am I?</a>
 			</li>
 			<li class="navbar-item">
-				<a href="">Academic training</a>
+				<a href="#academic">Academic training</a>
 			</li>
 			<li class="navbar-item">
-				<a href="">Work experience</a>
+				<a href="#work-experience">Work experience</a>
 			</li>
 			<li class="navbar-item">
-				<a href="">About me</a>
+				<a href="#about-me">About me</a>
 			</li>
 			<li class="navbar-item">
 				<a href="contact.html">Contact</a>
@@ -39,7 +39,7 @@
 		</ul>
 	</nav>
 	<main>
-		<section class="who-am-I clearfix section-container">
+		<section id="who-am-I" class="who-am-I clearfix section-container">
 			<div class="arduino-video">
 				<video width="550" controls> 
 				<source src="video/20170306_192508.mp4" type="video/mp4">
@@ -52,7 +52,7 @@
 				<span class="my-description">As you can see, I love playing with Arduino and electronic devices. But also I enjoyed traveling around the world and learning different languages.</span> 
 			</div>
 		</section>
-		<section class="academic section-container">
+		<section id="academic" class="academic section-container">
 			<div class="row-flex">
 				<div class="academic">
 					<figure class="flex-bug-e11">
@@ -92,7 +92,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="work-experience section-container">
+		<section id="work-experience" class="work-experience section-container">
 			<div class="row">
 				<div class="col-4">
 					<article class="last-job">
@@ -144,7 +144,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="about-me section-container">
+		<section id="about-me" class="about-me section-container">
 			<div class="picture">
 				<img src="images/cv_picture.jpg">
 			</div>
@@ -163,4 +163,5 @@
 		Talia Arias &copy; 2017 KeepCoding
 	</footer>
 </body>
+<script type="text/javascript" src="js/navbar-schroll.js"></script>
 </html>

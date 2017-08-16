@@ -16,7 +16,7 @@ body {
 	padding: 0;
 	font-family: 'Kurale', serif;
 	/*I can´t use variables, edge doesn´t recognize it*/
-	background-color: #D4E157;
+	background-color: #E6EE9C;
 }
 
 main {
@@ -31,7 +31,7 @@ main {
     height: 4em;
     font-size: 1em;
     position: fixed;
-    background-color: #E6EE9C;
+    background-color: #D4E157;
 }
 
 .navbar > .navbar-list {
@@ -177,7 +177,6 @@ main {
 }
 
 .footer {
-	background-color: #D4E157;
 	height: 100vh;
 	line-height: 100%; /*to center vertically*/
 	text-align: center; /*to center horizontally*/
